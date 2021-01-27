@@ -31,14 +31,16 @@
 2、（可选，推荐验证）验证地址信息是否有误
 
 将获取的经度和纬度填写到下面的链接中：
-```http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=经度&lat=纬度```
+```
+http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=经度&lat=纬度
+```
 如上图所示，获取清华大学的坐标后，链接即为：
 
 ```http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=116.326836&lat=40.00366```
 
 用浏览器打开，即可看到地址信息。检查`address`、`area`字段无误即可。
 
-```
+```json
 address:"北京市海淀区清华园街道清华大学"
 area:"北京市 海淀区"
 province:"北京市"
@@ -77,11 +79,17 @@ geo_api_info:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.
 ![定时和延时](https://cdn.nlark.com/yuque/0/2021/png/387341/1609440468875-d6a92a05-b474-4e19-b303-feecf1087209.png)
 
 >默认提交参数如下，如有变动，请自行修改模板。
+>
 >城市：江苏省 南京市 江宁区
+>
 >后台详细地址：江苏省南京市江宁区秣陵街道胜太路南京航空航天大学将军路校区
+>
 >体温：37度以下
+>
 >是否在校：是 
+>
 >是否处于隔离期：否
+>
 >是否…症状：否
 
 ### 三、配置微信通知
@@ -129,26 +137,33 @@ geo_api_info:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.
 
 ![推送设置](https://cdn.nlark.com/yuque/0/2021/png/387341/1609436964595-8c13ca8e-0c64-47d7-a6af-16c69579e3df.png)
 
-## 本地化部署
-使用Docker[搭建Qiandao框架](ttps://github.com/AragonSnow/qiandao)后，新建模板，上传本项目中的HAR文件即可。
-
 ## 其他说明
 
-1、打卡默认参数
+**1、校外打卡提交参数**
 
 > 今日是否在校：否
+>
 > 所在地点：中国大陆
+>
 > 今日体温范围：36℃~36.5℃
+>
 > 今日是否出现发热、乏力、干咳、呼吸困难等症状？否
+>
 > 今日是否接触疑似/确诊人群？否
+>
 > 是否处于隔离期/医学观察期（含特殊情况需要居家观察的）？否
+>
 > 今日是否从境外中高风险地区返回？否
+>
 > 今日是否有家属从境外中高风险地区返回？否
+>
 > 今日是否与从境外中高风险地区返回的人员有过密切接触？否
+>
 > 是否拥有苏康码？是
+>
 > 当前苏康码颜色是？绿色
 
-2、如何修改上报参数？
+**2、如何修改上报参数？**
 
 使用Fiddler自行抓包后，修改模板中的POST参数。
 
@@ -158,22 +173,32 @@ geo_api_info:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.
 >
 > 校内打卡：https://m.nuaa.edu.cn/ncov/wap/nuaa/index
 
-3、地址信息如何获取？
+3**、地址信息如何获取？**
 
-使用[高德地图坐标拾取工具]( https://lbs.amap.com/console/show/picker)获取经纬度后，会以GET方式提交至`http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=经度&lat=纬度`，获取i`南航上报时所需的地址信息。
+使用[高德地图坐标拾取工具]( https://lbs.amap.com/console/show/picker)获取经纬度后，会以GET方式提交至`http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=经度&lat=纬度`，获取i·南航上报时所需的地址信息。
 
-4、网站无法访问？
+**4、网站无法访问？**
 
-为确保安全，已为站点配置强制HTTPS跳转。请检查链接为https，端口号8843。
+为确保安全，已为站点配置强制HTTPS跳转。请检查链接为https，**端口号8843**。
 
-5、为什么要加端口号访问？
+**5、为什么要加端口号访问？**
 
-因为.mk域名为马其顿国家的顶级域名，国内无法备案。为保证访问速度，本项目部署于国内云服务商的主机上，因此不能使用80/443端口。
+因为.mk域名为马其顿国家的顶级域名，国内无法备案，本项目部署于国内云服务商主机上，因此不能使用80/443端口。
 
-6、安全性问题
+**6、安全性问题**
 
-项目基于Qiandao框架，所有用户敏感数据存入数据库时，使用每个用户唯一的256位密钥加密，用户密钥使用256位主密钥加密，所有解密过程只在内存中进行。作者对i南航密码没有兴趣=_=如实在有担心，可以自行本地化部署。
+项目基于Qiandao框架，所有用户敏感数据存入数据库时，使用每个用户唯一的256位密钥加密，用户密钥使用256位主密钥加密，所有解密过程只在内存中进行。如实在有担心，可以自行本地化部署。
+
+7、**本地化部署**
+
+使用Docker[搭建Qiandao框架](ttps://github.com/AragonSnow/qiandao)后，新建模板，上传本项目中的HAR文件即可。
 
 ## License
 
 [MIT License](https://github.com/Xm798/NUAA_NCoV_Checkin/blob/master/LICENSE)
+
+## 鸣谢
+
+[zombie12138](https://github.com/zombie12138)/**[nuaa_check_action](https://github.com/zombie12138/nuaa_check_action)**提供的POST参数注释
+
+[AragonSnow](https://github.com/AragonSnow)/**[qiandao](https://github.com/AragonSnow/qiandao)**和[binux](https://github.com/binux)/**[qiandao](https://github.com/binux/qiandao)**的Qiandao框架
