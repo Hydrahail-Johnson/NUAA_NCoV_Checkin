@@ -1,4 +1,6 @@
 <?php
+header("Content-type: text/css; charset=utf-8");
+
 $longitude = $_GET['lng'];
 $latitude = $_GET['lat'];
 
@@ -9,7 +11,6 @@ if ($longitude != null & $latitude != null) {
     $geo_response = curl_get_https('https://restapi.amap.com/v3/geocode/regeo?key=729923f88542d91590470f613adb27b5&s=rsv3&location=' . '' . $longitude . ',' . $latitude);
 //    echo $geo_response;
     $geo_info = json_decode($geo_response);
-//    echo dump($geo_info);
     $geo_api_info = array(
         'type' => 'complete',
         'info' => 'SUCCESS',
@@ -53,9 +54,7 @@ if ($longitude != null & $latitude != null) {
         $area = $province . ' '.$city .' '.$geo_info->regeocode->addressComponent->district;
     }
     
-    print_r('geo_info_api:'.json_encode($geo_api_info,JSON_UNESCAPED_UNICODE));
-    echo "<pre>";
-    echo PHP_EOL;
+    // echo "<pre>";
     print_r('address:'.json_encode($address,JSON_UNESCAPED_UNICODE));
     echo PHP_EOL;
     print_r('area:'.json_encode($area,JSON_UNESCAPED_UNICODE));
@@ -63,6 +62,9 @@ if ($longitude != null & $latitude != null) {
     print_r('province:'.json_encode($province,JSON_UNESCAPED_UNICODE));
     echo PHP_EOL;
     print_r('city:'.json_encode($city,JSON_UNESCAPED_UNICODE));
+    echo PHP_EOL;
+    print_r('geo_api_info:'.json_encode($geo_api_info,JSON_UNESCAPED_UNICODE));
+    
 } else {
     print_r('地址获取失败，请检查经纬度信息');
 }
