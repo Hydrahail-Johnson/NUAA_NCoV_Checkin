@@ -36,7 +36,7 @@ http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=经度&lat=纬度
 ```
 如上图所示，获取清华大学的坐标后，链接即为：
 
-```http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=116.326836&lat=40.00366```
+> [http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=116.326836&lat=40.00366](http://api.xm.mk:8990/GetLocationInfoAPI.php?lng=116.326836&lat=40.00366)
 
 用浏览器打开，即可看到地址信息。检查`address`、`area`字段无误即可。
 
