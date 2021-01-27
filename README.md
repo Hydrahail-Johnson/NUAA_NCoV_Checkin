@@ -199,6 +199,6 @@ geo_api_info:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.
 
 ## 鸣谢
 
-[zombie12138](https://github.com/zombie12138)/**[nuaa_check_action](https://github.com/zombie12138/nuaa_check_action)**提供的POST参数注释
+[zombie12138](https://github.com/zombie12138)/[nuaa_check_action](https://github.com/zombie12138/nuaa_check_action)提供的POST参数注释
 
-[AragonSnow](https://github.com/AragonSnow)/**[qiandao](https://github.com/AragonSnow/qiandao)**和[binux](https://github.com/binux)/**[qiandao](https://github.com/binux/qiandao)**的Qiandao框架
+[AragonSnow](https://github.com/AragonSnow)/[qiandao](https://github.com/AragonSnow/qiandao)和[binux](https://github.com/binux)/[qiandao](https://github.com/binux/qiandao)的Qiandao框架
