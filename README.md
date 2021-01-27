@@ -1,5 +1,8 @@
 # i·南航每日自动打卡
+[TOC]
+
 ## 项目说明
+
 基于[Qiandao](https://github.com/AragonSnow/qiandao)框架，每日自动上报健康信息，支持校内打卡及校外打卡。
 
 - 定时打卡
@@ -46,7 +49,7 @@ city:[]
 
 ![定时和延时设置](https://cdn.nlark.com/yuque/0/2021/png/387341/1609440468875-d6a92a05-b474-4e19-b303-feecf1087209.png)
 
-5、配置微信推送（**重要！即时获取打卡结果！**）看本文第三部分。
+5、配置微信推送（**重要！即时获取打卡结果！**）看[本文第三部分](https://github.com/Xm798/NUAA_NCoV_Checkin#%E4%B8%89%E9%85%8D%E7%BD%AE%E5%BE%AE%E4%BF%A1%E9%80%9A%E7%9F%A5)。
 
 ### 二、校内打卡
 
