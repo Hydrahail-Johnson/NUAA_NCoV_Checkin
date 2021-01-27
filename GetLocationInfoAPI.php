@@ -55,6 +55,7 @@ if ($longitude != null & $latitude != null) {
     }
     
     // echo "<pre>";
+    if($geo_info->infocode=='10000'){
     print_r('address:'.json_encode($address,JSON_UNESCAPED_UNICODE));
     echo PHP_EOL;
     print_r('area:'.json_encode($area,JSON_UNESCAPED_UNICODE));
@@ -64,9 +65,15 @@ if ($longitude != null & $latitude != null) {
     print_r('city:'.json_encode($city,JSON_UNESCAPED_UNICODE));
     echo PHP_EOL;
     print_r('geo_api_info:'.json_encode($geo_api_info,JSON_UNESCAPED_UNICODE));
+    echo PHP_EOL;
+    print_r('amap_infocode:'.$geo_info->infocode);
+        
+    }else{
+    print_r('地址信息获取失败，请检查经纬度范围');
+    }
     
 } else {
-    print_r('地址获取失败，请检查经纬度信息');
+    print_r('地址信息获取失败，请输入经纬度');
 }
 
 function curl_get_https($url)
