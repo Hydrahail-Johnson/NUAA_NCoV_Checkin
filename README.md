@@ -38,11 +38,12 @@
 
 用浏览器打开，即可看到地址信息。检查`address`、`area`字段无误即可。
 
-```geo_info_api:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.00366","R":"116.326836","lng":"116.326836","lat":"40.00366"},"message":"Get ipLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":100,"isConverted":"true","addressComponent":{"citycode":"010","adcode":"110108","businessAreas":[],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"双清路","streetNumber":"30号","country":"中国","province":"北京市","city":[],"district":"海淀区","township":"清华园街道"},"formattedAddress":"北京市海淀区清华园街道清华大学","roads":[],"crosses":[],"pois":[]}
+```
 address:"北京市海淀区清华园街道清华大学"
 area:"北京市 海淀区"
 province:"北京市"
 city:[]
+geo_api_info:{"type":"complete","info":"SUCCESS","status":1,"position":{"Q":"40.00366","R":"116.326836","lng":"116.326836","lat":"40.00366"},"message":"Get ipLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":100,"isConverted":"true","addressComponent":{"citycode":"010","adcode":"110108","businessAreas":[],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"双清路","streetNumber":"30号","country":"中国","province":"北京市","city":[],"district":"海淀区","township":"清华园街道"},"formattedAddress":"北京市海淀区清华园街道清华大学","roads":[],"crosses":[],"pois":[]}
 ```
 
 #### 创建打卡任务
