@@ -89,9 +89,9 @@ city:[]
 
 #### 1、选择推送方式，并获取配置信息。
 
-根据有无Github账号，有两种方式配置微信通知，任选一种即可。
+根据有无GitHub账号，有两种方式配置微信通知，任选一种即可。
 
-##### 1）无Github账号
+##### 1）无GitHub账号（使用WXPusher）
 
 1、微信扫描二维码，关注公众号。
 
@@ -101,16 +101,16 @@ city:[]
 
 2、进入公众号，点击公众号菜单内“我的”-“我的UID”。
 
-3、回到网站后台，点击“推送注册”，将下面的`APPTOKEN`和自己的`UID`填到wxpusher中，点击测试，微信正常收到送即可。
+3、回到网站后台，点击“推送注册”，将下面的`APPTOKEN`和自己的`UID`填到WXPusher中，点击测试，微信正常收到送即可。
 
 > apptoken：AT_6kBmtADUKlnbAS2Y9RKe25U7zk8Cuf8f
 > uid：自己从微信中获取 
 
 ![Wxpusher推送注册](https://cdn.nlark.com/yuque/0/2021/png/387341/1609436709323-95703aea-b494-448c-82ea-1b7a01b50915.png)
 
-##### 2）有Github账号
+##### 2）有GitHub账号（使用Server酱）
 
-1、登录http://sc.ftqq.com/，点击右上角“登入”，使用Github账号登录。
+1、登录[http://sc.ftqq.com/](http://sc.ftqq.com/)，点击右上角“登入”，使用GitHub账号登录。
 
 2、点击“发送消息”，获取SCKEY。
 
@@ -124,7 +124,7 @@ city:[]
 
 #### 2、开启推送
 
-配置好推送信息之后，点击“**推送设置**”，根据自己的配置选择推到Server酱或者Wxpusher，并且四种通知全部勾选，检查任务推送开关，然后点击提交。
+配置好推送信息之后，点击“**推送设置**”，根据自己的配置选择推到Server酱或者WXPusher，并且四种通知全部勾选，检查任务推送开关，然后点击提交。
 
 ![推送设置](https://cdn.nlark.com/yuque/0/2021/png/387341/1609436964595-8c13ca8e-0c64-47d7-a6af-16c69579e3df.png)
 
