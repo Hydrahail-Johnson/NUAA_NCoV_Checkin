@@ -11,7 +11,7 @@
 
 
 ## 📋使用文档
-### [https://nnci.docs.xm.mk/](https://nnci.docs.xm.mk/)
+### [https://c.docs.xm.mk](https://c.docs.xm.mk/)
 
 ## License
 
