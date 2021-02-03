@@ -11,7 +11,7 @@
 
 
 ## 📋使用文档
-### [https://xm798.gitbook.io/nuaa-ncov-checkin/](https://xm798.gitbook.io/nuaa-ncov-checkin/)
+### [https://nnci.docs.xm.mk/](https://nnci.docs.xm.mk/)
 
 ## License
 
